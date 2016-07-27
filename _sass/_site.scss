@@ -1,0 +1,76 @@
+/*------------------------------------------------------------
+  Site Style
+------------------------------------------------------------*/
+
+.site-header{
+    
+    text-align: center;    
+
+    .wrapper{
+        
+        padding-top: 5em;
+        padding-bottom: 2em;
+        
+        .site-title{
+            text-decoration: none;
+            color: $text-color-white;
+            font-size: $big-font-size;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+    
+    
+    .header-badge{
+        border-radius: 100px;
+        border: 12px #fff solid;
+        height: 200px;
+        width: 200px;
+        background-color: #fff;
+        display: inline-block;
+        margin-bottom: -140px;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        overflow: hidden;
+        
+        
+        img{
+            object-fit: none; /* Do not scale the image */
+            object-position: center; /* Center the image within the element */
+            height: 176px;
+            width: 176px;
+        }
+    }
+}
+
+.page-content{ 
+    margin: $spacing-unit auto;
+    padding: $spacing-unit;
+    border-radius: 3px;
+    background-color: $grey-color-light;
+    width: 980px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    
+    .top{
+        
+        text-align: center;
+        margin-top: 6em;
+        
+        a.email{
+            font-size: 2rem;
+            text-decoration: none;
+            color: $brand-color;
+        }
+
+        p.description{            
+            font-size: 2rem;
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .page-content{  
+        margin: $spacing-unit 2%;
+        width: 96%;
+    }
+}

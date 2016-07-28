@@ -2,10 +2,6 @@
   Lists
 ------------------------------------------------------------*/
 
-ul {
-  list-style: circle inside;
-}
-
-ol {
-  list-style: decimal inside;
+ul, ol {
+  list-style: none;
 }

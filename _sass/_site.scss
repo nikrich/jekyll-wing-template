@@ -22,15 +22,17 @@
     
     
     .header-badge{
-        border-radius: 100px;
+        border-radius: 50%;
         border: 12px #fff solid;
         height: 200px;
         width: 200px;
-        background-color: #fff;
+        background: url('../assets/home.svg') center center no-repeat #fff;
+        background-size: 50px 50px;
         display: inline-block;
-        margin-bottom: -140px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        margin-bottom: -140px;        
         overflow: hidden;
+        transition: $anim-speed; 
+        @extend .z-depth-1;
         
         
         img{
@@ -38,22 +40,32 @@
             object-position: center; /* Center the image within the element */
             height: 176px;
             width: 176px;
+            border-radius: 50%;
+            opacity: 1;
+            transition: $anim-speed;        
+        }        
+    }
+    
+    .header-badge:hover{        
+        transition: $anim-speed;   
+        @extend .z-depth-5;
+        
+        img{         
+            opacity: 0.7;
+            transition: $anim-speed;  
         }
+        
     }
 }
 
 .page-content{ 
-    margin: $spacing-unit auto;
-    padding: $spacing-unit;
-    border-radius: 3px;
-    background-color: $grey-color-light;
-    width: 980px;
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: $spacing-unit auto;   
+    width: 980px;    
     
     .top{
         
         text-align: center;
-        margin-top: 6em;
+        padding: $spacing-unit * 4 $spacing-unit $spacing-unit;       
         
         a.email{
             font-size: 2rem;
@@ -66,6 +78,65 @@
             text-align: left;
         }
     }
+    
+    .posts{
+        .card-title{
+            color: $brand-color;
+            display: block;
+            width: 100%;
+            border-bottom: $brand-color solid 1px;
+        }
+        
+        .post-list{
+            margin:0;
+            padding:0;
+            
+            li{
+                
+                padding: 15px 0;
+                border-bottom: #ddd solid 1px;
+                
+                .post-meta{
+                    float:right;
+                    color:#ccc;
+                    font-size: 14px;
+                }
+                
+                a{
+                   
+                    text-decoration: none;
+                    color:#333;
+                    font-size: 21px;
+                    
+                }
+            }
+        }
+        
+        .rss-subscribe{
+            text-align: center;
+            margin-top: 15px;
+            
+            a{
+                text-decoration: none;
+                color:$brand-color;
+            }
+        }
+    }
+}
+
+.post{
+    .card-content{
+            padding: 80px 20px;
+    }
+}
+
+.footer-heading{
+    display:block;
+    text-align: center;
+    color: #fff;
+    font-size: 2.6rem;
+    padding-bottom: 0.5em;
+    font-weight: 300;
 }
 
 @media (max-width: 1050px) {

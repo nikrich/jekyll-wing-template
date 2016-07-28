@@ -8,35 +8,50 @@
 
 /*making font-sizes base 10*/
 html {  
-  width: 100%;
-    
+ 
+  width: 100%;   
+ 
   box-sizing: border-box;
   font-size: 62.5%;
     
   background-color: $grey-color;
-  background-image: url('../assets/hero.jpg');
+  
   background-repeat: no-repeat;
   background-size:cover;
+  background-attachment: fixed;
+    
+  padding: 0;
+  margin: 0;
 
 }
 
 /*setting up font sizes and base font family*/
 body {
-  height: 100%;
+  minheight: 100%;
   width: 100%;
-  
-  background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, $grey-color 100%);   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,$grey-color)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,$grey-color 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%,$grey-color 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%,$grey-color 100%); /* IE10+ */
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,$grey-color 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#825b00',GradientType=0 ); /* IE6-9 */
-    
+
+  padding: 0;
   margin: 0;
+  
+  background-image: url('../assets/hero.jpg');
+    
   letter-spacing: 0.01em;
   line-height: 1.6;
   font-size: 1.5em;
   font-weight: 400;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.outer{
+    height: 100%;
+  width: 100%;
+    
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, $grey-color 100%);   /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,$grey-color)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%,$grey-color 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%,$grey-color 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%,$grey-color 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,$grey-color 100%); /* W3C */
+ 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#825b00',GradientType=0 ); /* IE6-9 */
 }
